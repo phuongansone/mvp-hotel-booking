@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "79159ac9-ab85-44bf-84c7-af63a9f58cb7",
+		"name": "MVP Hotel Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7777249"
+	},
+	"item": [
+		{
+			"name": "Create Booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTcwMjkwNjI3MSwiZXhwIjoxNzAyOTkyNjcxfQ.q2-5JChJscRtV0gbbpzNV7U6tO-NgRwMl_pvjgzbDgrr4gTyaWDTK28x99m5HDaxaOcj5ii5YRKRokBLbCUmcQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"hotelId\": \"33b7391a-8e80-48f8-bd66-bca275565255\",\n  \"checkinDate\": \"2024-01-01\",\n  \"checkoutDate\": \"2024-01-05\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTcwMjkwNjI3MSwiZXhwIjoxNzAyOTkyNjcxfQ.q2-5JChJscRtV0gbbpzNV7U6tO-NgRwMl_pvjgzbDgrr4gTyaWDTK28x99m5HDaxaOcj5ii5YRKRokBLbCUmcQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"bookingId\": \"985d3f8c-80ee-4943-a2aa-aed34571e0ed\",\n  \"checkinDate\": \"2023-01-10\",\n  \"checkoutDate\": \"2023-01-25\",\n  \"status\": \"CONFIRMED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Booking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTcwMjkwNjI3MSwiZXhwIjoxNzAyOTkyNjcxfQ.q2-5JChJscRtV0gbbpzNV7U6tO-NgRwMl_pvjgzbDgrr4gTyaWDTK28x99m5HDaxaOcj5ii5YRKRokBLbCUmcQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"bookingId\": \"6351dd50-53a7-4f9c-9499-3de224591a9b\",\n  \"checkinDate\": \"2023-01-10\",\n  \"checkoutDate\": \"2023-01-25\",\n  \"status\": \"CONFIRMED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Booking By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTcwMjkwNjI3MSwiZXhwIjoxNzAyOTkyNjcxfQ.q2-5JChJscRtV0gbbpzNV7U6tO-NgRwMl_pvjgzbDgrr4gTyaWDTK28x99m5HDaxaOcj5ii5YRKRokBLbCUmcQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"bookingId\": \"6351dd50-53a7-4f9c-9499-3de224591a9b\",\n  \"checkinDate\": \"2023-01-10\",\n  \"checkoutDate\": \"2023-01-25\",\n  \"status\": \"CONFIRMED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bookings/985d3f8c-80ee-4943-a2aa-aed34571e0ed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"985d3f8c-80ee-4943-a2aa-aed34571e0ed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTcwMjkwNjI3MSwiZXhwIjoxNzAyOTkyNjcxfQ.q2-5JChJscRtV0gbbpzNV7U6tO-NgRwMl_pvjgzbDgrr4gTyaWDTK28x99m5HDaxaOcj5ii5YRKRokBLbCUmcQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bookings/cancellation/985d3f8c-80ee-4943-a2aa-aed34571e0ed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"cancellation",
+						"985d3f8c-80ee-4943-a2aa-aed34571e0ed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"john_doe\",\n  \"password\": \"securepassword123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"anna\",\n  \"password\": \"securepassword123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
